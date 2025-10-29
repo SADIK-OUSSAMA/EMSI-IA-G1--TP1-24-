@@ -122,6 +122,9 @@ public class Bb implements Serializable {
      *
      * @return null pour rester sur la même page.
      */
+    public void toggleDebug() {
+        this.setDebug(!isDebug());
+    }
     public String envoyer() {
         if (question == null || question.isBlank()) {
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,
