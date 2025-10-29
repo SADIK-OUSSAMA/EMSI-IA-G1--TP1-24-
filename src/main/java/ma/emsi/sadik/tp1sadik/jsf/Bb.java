@@ -52,6 +52,8 @@ public class Bb implements Serializable {
      */
     private StringBuilder conversation = new StringBuilder();
 
+    private boolean Debug;
+
     /**
      * Contexte JSF. Utilisé pour qu'un message d'erreur s'affiche dans le formulaire.
      */
@@ -105,6 +107,13 @@ public class Bb implements Serializable {
         this.conversation = new StringBuilder(conversation);
     }
 
+    private void setDebug(boolean b) {
+        Debug = b;
+    }
+
+    public boolean isDebug(){
+        return Debug;
+    }
     /**
      * Envoie la question au serveur.
      * En attendant de l'envoyer à un LLM, le serveur fait un traitement quelconque, juste pour tester :
